@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Catalogo</title>
+</head>
+
+<body>
+  <center><h1>Catalogo de Productos</h1></center>
+  <div class="container">
+    <table border="1px">
+      <tr>
+        <th>Codigo del Producto</th>
+        <th>Nombre del Producto</th>
+        <th>Precio del Producto</th>
+      </tr>
+      {% for producto in productos %}
+      <tr>
+        <td>
+          {{producto[0]}}
+        </td>
+        <td>
+          {{producto[1]}}
+        </td>
+        <td>
+          ${{producto[2]}}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

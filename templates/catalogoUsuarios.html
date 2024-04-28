@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Catalogo Usuarios</title>
+</head>
+
+<body>
+    <center><h1>Ususarios</h1></center>
+    <div class="container">
+        <table border="1px">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Pass</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>
+                    {{row[0]}}
+                </td>
+                <td>
+                    {{row[1]}}
+                </td>
+                <td>
+                    {{row[2]}}
+                </td>
+                <td>
+                    {{ row[3]}}
+                </td>
+                <td>
+                    {{row[4]}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
